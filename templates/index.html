@@ -1,0 +1,204 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <!-- <meta http-equiv="refresh" content="60"> -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{% static 'img/favicon.ico' %}">
+
+    <title>NewTop Cup Machine Dashboard</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- AdminLTE template CSS -->
+    <link href="{% static 'css/AdminLTE.css' %}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/dashboard.css' %}" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href={% static 'css/font-awesome.min.css'%}>
+    <!-- Ionicons -->
+    <link rel="stylesheet" href={% static 'css/ionicons.min.css'%}>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- <script src="{% static 'js/echarts.min.js' %}"></script> -->
+      <style>
+          .page-header{
+
+          }
+      </style>
+  </head>
+
+
+  <body style="padding-top:0px;">
+<!--     <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://newtop.fm.energymost.com">NewTop</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/admin">admin</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav> -->
+
+    <div class="container-fluid">
+        <div class="row">
+            <!--<h1 class="page-header text-right">设备看板 当天统计-->
+          <!--<br>asdasdasdasdads</h1>-->
+            <h2 class="pull-left">&nbsp&nbsp&nbsp&nbsp设备看板<small style="color:black;font-size:20px;">&nbsp&nbsp&nbsp&nbsp当天统计</small>
+            <br><small style="font-size: 20px">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp纸杯机1号车间</small>
+            </h2>
+            <br>
+            <h3 class="pull-right" >{{now_change}}&nbsp&nbsp&nbsp</h3>
+             <div style="width: 1000px;height:1px;margin:0px auto;padding:0px;background-color:#D5D5D5;overflow:hidden;"></div>
+        </div>
+      <div class="row">
+          <!--<h1 class="page-header text-right">设备看板 当天统计-->
+          <!--<br>asdasdasdasdads</h1>-->
+          <div class="row placeholders">
+<!--         <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+            <span class="info-box-icon bg-red"><i class="fa fa-stop-circle-o"></i></span>
+            <div class="info-box-content">
+              <span class="info-box-title">Machine #12</span>
+              <span class="info-box-text">CPU Traffic1</span>
+              <span class="info-box-number" id="cpu1">12<small>%</small></span>
+              <span class="info-box-text">CPU Traffic2</span>
+              <span class="info-box-number" id="cpu2">28<small>%</small></span>
+              <span class="info-box-text">CPU Traffic3</span>
+              <span class="info-box-number" id="cpu3">36<small>%</small></span>
+              <span class="info-box-text">CPU Traffic4</span>
+              <span class="info-box-number" id="cpu4">20<small>%</small></span>
+            </div>
+          </div>
+        </div>
+ -->
+
+{% if machine_list %}
+    {% for machine in machine_list %}
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+          {% if machine.status == 2 %}
+            <span class="info-box-icon bg-green" id="{{ machine.mid }}_color"><i class="fa fa-play-circle-o" id="{{ machine.mid }}_playstop"></i></span>
+          {% elif machine.status == 1 %}
+            <span class="info-box-icon bg-yellow" id="{{ machine.mid }}_color"><i class="fa fa-play-circle-o" id="{{ machine.mid }}_playstop"></i></span>
+          {% elif machine.status == 0 %}
+            <span class="info-box-icon bg-red" id="{{ machine.mid }}_color"><i class="fa fa-stop-circle-o" id="{{ machine.mid }}_playstop"></i></span>        
+          {% else %}
+            <span class="info-box-icon bg-grey" id="{{ machine.mid }}_color"><i class="fa fa-stop-circle-o" id="{{ machine.mid }}_playstop"></i></span>
+          {% endif %}
+            <div class="info-box-content">
+              <span class="info-box-title">{{ machine.name }}</span>
+              {% for prop in machine.props %}
+                <span class="info-box-text">{{ prop.name }}</span>
+                <span class="info-box-number" id="{{ machine.mid }}_{{ prop.name }}">{{ prop.value }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No machines are available.</p>
+{% endif %}
+
+<script type="text/javascript">
+var machine_list2;
+timeTicket = setInterval(function () {
+    $.ajax({
+        type:'GET',
+        url:'/dashboard2/machine-info-api',
+        dataType:'json',
+        success:function(json)
+            {
+                machine_list2 = eval(json);
+                // $("#gauge").text(machine_list2[0].status);
+                if (machine_list2)
+                {
+                    var index;
+                    for (index = 0; index < machine_list2.length; ++index)
+                    {
+                        machine = machine_list2[index];
+                        // console.log(machine);
+                        mid = machine.mid;
+                        // update machine status
+                        status = machine.status;
+                        mid_color = "#" + mid.toString() + "_color";
+                        mid_playstop = "#" + mid.toString() + "_playstop";
+                        $(mid_color).removeClass("info-box-icon bg-green");
+                        $(mid_color).removeClass("info-box-icon bg-yellow");
+                        $(mid_color).removeClass("info-box-icon bg-red");
+                        $(mid_playstop).removeClass("fa fa-play-circle-o");
+                        $(mid_playstop).removeClass("fa fa-stop-circle-o");
+                        // console.log(status);
+                        if (status == 2)
+                        // run without alarm
+                        {
+                          $(mid_color).addClass("info-box-icon bg-green");
+                          $(mid_playstop).addClass("fa fa-play-circle-o");
+                        }
+                        else if (status == 1)
+                        // run with alarm
+                        {
+                          $(mid_color).addClass("info-box-icon bg-yellow");
+                          $(mid_playstop).addClass("fa fa-play-circle-o");      
+                        }
+                        else if (status == 0)
+                        // stop
+                        {
+                          $(mid_color).addClass("info-box-icon bg-red");
+                          $(mid_playstop).addClass("fa fa-stop-circle-o");         
+                        }
+                        else
+                        // offline
+                        {
+                          $(mid_color).addClass("info-box-icon bg-grey");
+                          $(mid_playstop).addClass("fa fa-stop-circle-o");         
+                        }
+                        // update the props
+                        props = machine.props;
+                        for (index2 = 0; index2 < props.length; ++index2)
+                        {
+                            prop = props[index2];
+                            mid_prop = "#" + mid.toString() + "_" + prop.name
+                            $(mid_prop).text(prop.value)
+                        }
+                    }
+                    console.log("update success!")
+                }
+                else
+                {
+                    console.log("update failed!")
+                }
+            }
+    });
+}, 900000);
+</script>
+
+        </div>
+
+<!--           <h2 class="sub-header">Section title</h2>
+          <div id="gauge" style="width: 1000px;height:600px;"></div> -->
+
+
+      </div>
+    </div>
+  </body>
+</html>
