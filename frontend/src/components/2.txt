@@ -1,0 +1,3 @@
+scp -i remote_ssh  -r directoryName ubuntu@host:/home/ubuntu/git/
+
+scp -i remote_ssh  FileName ubuntu@host:/home/ubuntu/git/

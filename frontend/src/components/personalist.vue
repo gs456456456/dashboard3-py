@@ -3,7 +3,7 @@
     <div id="showpersonal">
       <div class="container-fluid">
         <div class="row">
-    <div id="cchoose">客户选择：</div>
+    <div id="cchoose" style="font-size:350%">客户选择：</div>
 </div>
 <div class="row"> 
   <ul id="linelist" style="list-style-typenone">
@@ -25,7 +25,11 @@ li {}
   margin-left: 12%;
 }
 #linelist{
-  margin-top:3%;
+  margin-top:10%;
+}
+#personalist{
+  margin-left: 50px;
+  margin-right:20px;
 }
 </style>
 <script>
@@ -70,19 +74,23 @@ export default {
                 name1 = '上海生农生化制品有限公司'
                 store.state.factoryname1 = name1
                 if(this.device === true){
-                            this.linelist += '<li><a href="/#/line'+a[i]+'" class="col-md-4 col-sm-4 col-xs-12 button button-small style="list-style-typenone">'+name1+'</a></li></div><div class="col-md-4 col-sm-4 col-xs-12"></div>'}
+                            $('#cchoose').css('font-size','30px')
+                             $('#cchoose').css('margin-left','10px')
+                             $('#cchoose').css('margin-top','8px')
+                            this.linelist += '<li><a href="/#/line'+a[i]+'" class="button  style="list-style-typenone">'+'<span style="font-size:16px;">'+name1+'</span>'+'</a></li></div>'}
                 else {
-                      this.linelist += '<li><a href="/#/linecom'+a[i]+'" class="col-md-4 col-sm-4 col-xs-12 button button-small style="list-style-typenone">'+name1+'</a></li></div><div class="col-md-4 col-sm-4 col-xs-12"></div>'
+                      this.linelist += '<li style = "margin-left:400px;"><a href="/#/linecom'+a[i]+'" class="button button-large style="list-style-typenone;"">'+'<span style="font-size:23px;">'+ name1 +'</span>'+'</a></li></div>'
                 }
               }
             else if(a[i]==='7'){
                 name2 = '巴斯夫植物保护有限公司'
                 store.state.factoryname2 = name2
                 if(this.device === true){
-                            this.linelist += '<li><a href="/#/line'+a[i]+'" class="col-md-4 col-sm-4 col-xs-12 button button-small style="list-style-typenone">'+name2+'</a></li></div><div class="col-md-4 col-sm-4 col-xs-12"></div>'
+
+                            this.linelist += '<li style="margin-top:20px"><a href="/#/line'+a[i]+'" class="button style="list-style-typenone">'+'<span style="font-size:16px;margin-left:13px;">'+ name2 +'</span>'+'</a></li></div>'
                           }
                 else{
-                      this.linelist += '<li><a href="/#/linecom'+a[i]+'" class="col-md-4 col-sm-4 col-xs-12 button button-small style="list-style-typenone">'+name2+'</a></li></div><div class="col-md-4 col-sm-4 col-xs-12"></div>'}
+                      this.linelist += '<li style = "margin-left:1300px;margin-top:-50px;"><a href="/#/linecom'+a[i]+'" class="button button-large style="list-style-typenone">'+'<span style="font-size:23px;">'+name2+'</span>'+'</a></li></div>'}
             }
 
     }  

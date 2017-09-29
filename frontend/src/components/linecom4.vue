@@ -4,14 +4,15 @@
     <div>{{get_2}}</div>
     <div>{{get_3}}</div>
     <div>{{get_4}}</div> -->
+                <img style='position:absolute;top:-390px;right:-700px;z-index:50' src="../assets/logo2.png">
     <div class="container-fluid">
         <div class="row">
-            <h2 class="pull-left" style="font-size: 150%">&nbsp&nbsp&nbsp&nbsp{{factory}}<small style="color:black;font-size:20px;">&nbsp&nbsp&nbsp&nbsp</small>
+            <h2 class="pull-left" style="font-size: 200%">&nbsp&nbsp&nbsp&nbsp{{factory}}<small style="color:black;font-size:20px;">&nbsp&nbsp&nbsp&nbsp</small>
             <br><small style="font-size: 80%">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp1号车间</small>
             </h2>
             <br>
             <h3 class="pull-right" >&nbsp&nbsp&nbsp</h3>
-             <div style="width: 1000px;height:1px;margin:0px auto;margin-top:1.5%;background-color:#D5D5D5;overflow:hidden;"></div>
+             <div style="width: 1200px;height:1px;margin-top:1%;margin-left:14%;background-color:#D5D5D5;overflow:hidden;"></div>
         </div>
 
       <div class="row" style="margin-left:80px">
@@ -19,42 +20,59 @@
 <!-- <div v-if='message'> -->
   <div>
     <div id="r1" class="r">
+                    <div class="upuphat"></div>
+           <div class="uphat"></div>
       <div id="s1" class="s">
-				<div>前剪切罐</div>
-		<div>重量:<span>{{a[0]}}kg</span></div>
-				<div>温度:<span>{{a[1]}}摄氏度</span></div>
-		<div>剪切电流:<span>{{a[2]}}A</span></div>
-		<div>搅拌电流:<span>{{a[3]}}A</span></div>
+
+				<div class="c1">前剪切罐</div>
+		<div class="c2">重量: <span class="c3">{{a[0]}} kg</span></div>
+				<div class="c2">温度: <span class="c3">{{a[1]}} 摄氏度</span></div>
+		<div class="c2">剪切电流: <span class="c3">{{a[2]}} A</span></div>
+		<div class="c2">搅拌电流: <span class="c3">{{a[3]}} A</span></div>
       </div>
+      <div class="pipet"></div>
+      <div class="pipet2"></div>
     </div>
     </div>
     <div>
             <div id="r2" class="r">
+              <div class="upuphat"></div>
+              <div class="uphat"></div>
       <div id="s2" class="s">
-      	<div>前缓冲罐</div>
-		<div>重量:<span>{{a[4]}}kg</span></div>
-		<div>搅拌电流:<span>{{a[5]}}A</span></div>
+      	<div class="c1">前缓冲罐</div>
+		<div class="c2">重量:<span class="c3">{{a[4]}} kg</span></div>
+		<div class="c2">搅拌电流:<span class="c3">{{a[5]}} A</span></div>
       </div>
+      <div class="pipet"></div>
+      <div class="pipet2"></div>
     </div>
 </div>
 <div>
             <div id="r3" class="r">
+                            <div class="upuphat"></div>
+              <div class="uphat"></div>
       <div id="s3" class="s">
-      	<div>后剪切罐</div>
-		<div>重量:<span>{{a[6]}}kg</span></div>
-				<div>温度:<span>{{a[7]}}摄氏度</span></div>
-		<div>剪切电流:<span>{{a[8]}}A</span></div>
-		<div>搅拌电流:<span>{{a[9]}}A</span></div>
+      	<div class="c1">后剪切罐</div>
+		<div class="c2">重量:<span class="c3">{{a[6]}} kg</span></div>
+				<div class="c2">温度:<span class="c3">{{a[7]}} 摄氏度</span></div>
+		<div class="c2">剪切电流:<span class="c3">{{a[8]}} A</span></div>
+		<div class="c2">搅拌电流:<span class="c3">{{a[9]}} A</span></div>
       </div>
+                <div class="pipet"></div>
+      <div class="pipet2"></div>  
     </div>
     </div>
     <div>
     <div id="r4" class="r">
+                    <div class="upuphat"></div>
+      <div class="uphat"></div>
       <div id="s4" class="s">
-      	<div>后缓冲罐</div>
-		<div>重量:<span>{{a[10]}}kg</span></div>
-		<div>搅拌电流:<span>{{a[11]}}A</span></div>
+      	<div class="c1">后缓冲罐</div>
+		<div class="c2">重量:<span class="c3">{{a[10]}} kg</span></div>
+		<div class="c2">搅拌电流:<span class="c3"> {{a[11]}} A</span></div>
       </div>
+            <div class="pipet"></div>
+      <div class="pipet2"></div>
     </div>
         </div>
         </div>
@@ -62,55 +80,120 @@
 <div id='machine'class="row">
 	<div class="a" id="a1">
 				<div class="t1">理瓶机</div>
-		<div>运行状态:<span>{{b[0]}}</span></div>
-				<div>故障代码:<span>{{b[1]}}</span></div>
-		<div>产量:<span>{{b[2]}}</span></div>
-		<div>工作速度:<span>{{b[3]}}</span></div>
-		<div>批次号:<span>{{b[4]}}</span></div>
+		<div class="t2">运行状态:<span id="statuscolor1" class="t3">{{b[0]}}</span></div>
+				<div class="t2">故障代码:<span class="t3">{{b[1]}}</span></div>
+		<div class="t2">产量:<span class="t3">{{b[2]}} 瓶</span></div>
+		<div class="t2">工作速度:<span class="t3">{{b[3]}} 瓶/小时</span></div>
+		<div class="t2">批次号:<span class="t3">{{b[4]}}</span></div>
+    <div class="ion-arrow-right-a myarrow"></div>
 	</div>
 	<div class="a" id="a2">
 				<div class="t1">罐装机</div>
-		<div>运行状态:<span>{{c[0]}}</span></div>
-				<div>故障代码:<span>{{c[1]}}</span></div>
-		<div>产量:<span>{{c[2]}}</span></div>
-		<div>工作速度:<span>{{c[3]}}</span></div>
-		<div>批次号:<span>{{c[4]}}</span></div>
+		<div class="t2">运行状态:<span id="statuscolor2" class="t3">{{c[0]}}</span></div>
+				<div class="t2">故障代码:<span class="t3">{{c[1]}}</span></div>
+		<div class="t2">产量:<span class="t3">{{c[2]}} 瓶</span></div>
+		<div class="t2">工作速度:<span class="t3">{{c[3]}} 瓶/小时</span></div>
+		<div class="t2">批次号:<span class="t3">{{c[4]}}</span></div>
+    <div class="ion-arrow-right-a myarrow"></div>
 	</div>
 	<div class="a" id="a3">
 				<div class="t1">旋盖机</div>
-		<div>运行状态:<span>{{d[0]}}</span></div>
-				<div>故障代码:<span>{{d[1]}}</span></div>
-		<div>产量:<span>{{d[2]}}</span></div>
-		<div>工作速度:<span>{{d[3]}}</span></div>
-		<div>批次号:<span>{{d[4]}}</span></div>
+		<div class="t2">运行状态:<span id="statuscolor3" class="t3">{{d[0]}}</span></div>
+				<div class="t2">故障代码:<span class="t3">{{d[1]}}</span></div>
+		<div class="t2">产量:<span class="t3">{{d[2]}} 瓶</span></div>
+		<div class="t2">工作速度:<span class="t3">{{d[3]}} 瓶/小时</span></div>
+		<div class="t2">批次号:<span class="t3">{{d[4]}}</span></div>
+    <div class="ion-arrow-right-a myarrow"></div>
 	</div>
 	<div class="a" id="a4">
 				<div class="t1">贴标机</div>
-		<div>运行状态:<span>{{e[0]}}</span></div>
-				<div>故障代码:<span>{{e[1]}}</span></div>
-		<div>产量:<span>{{e[2]}}</span></div>
-		<div>工作速度:<span>{{e[3]}}</span></div>
-		<div>批次号:<span>{{e[4]}}</span></div>
+		<div class="t2">运行状态:<span id="statuscolor4" class="t3">{{e[0]}}</span></div>
+				<div class="t2">故障代码:<span class="t3">{{e[1]}}</span></div>
+		<div class="t2">产量:<span class="t3">{{e[2]}} 瓶</span></div>
+		<div class="t2">工作速度:<span class="t3">{{e[3]}} 瓶/小时</span></div>
+		<div class="t2">批次号:<span class="t3">{{e[4]}}</span></div>
+    <div class="ion-arrow-right-a myarrow"></div>
 	</div>
 	<div class="a" id="a5">
 		<div class="t1">装箱机</div>
-		<div>运行状态:<span>{{f[0]}}</span></div>
-				<div>故障代码:<span>{{f[1]}}</span></div>
-		<div>产量:<span>{{f[2]}}</span></div>
-		<div>工作速度:<span>{{f[3]}}</span></div>
-		<div>批次号:<span>{{f[4]}}</span></div>
+		<div class="t2">运行状态:<span id="statuscolor5" class="t3">{{f[0]}}</span></div>
+				<div class="t2">故障代码:<span class="t3">{{f[1]}}</span></div>
+		<div class="t2">产量:<span class="t3">{{f[2]}} 瓶</span></div>
+		<div class="t2">工作速度:<span class="t3">{{f[3]}} 瓶/小时</span></div>
+		<div class="t2">批次号:<span class="t3">{{f[4]}}</span></div>
 	</div>
 
 <!--       </div> -->
 <!--     <p v-else>No machines are available.</p> -->
 </div>
+
 </div>
 </div>
 </template>
 <style type="text/css">
+.upuphat{
+    background-color: #666666;
+  opacity: 0.5;
+  z-index: 2;
+  position:absolute;left:102px;top:-90px;
+    border-radius: 3px 3px 0 0;
+  width: 25px;
+  height: 40px;
+}
+.uphat{
+  background-color: #666666;
+  opacity: 0.6;
+  z-index: 2;
+  position:absolute;left:95px;top:-50px;
+  border-radius: 5px 5px 0 0;
+  width: 40px;
+  height: 50px;
+}
+.pipet{
+  background-color:#666666;width:16px;height:65px;position:relative;left:90px;top:76px;
+  border-radius: 5px 5px 0 5px;
+  z-index: 2;
+  color:#666666;
+  opacity: 0.6;
+}
+.pipet2{
+    background-color:#666666;width:90px;height:16px;position:relative;left:106px;top:60px;
+  border-radius:  0 5px 5px 0;
+  z-index: 2;
+  color:#666666;
+  opacity: 0.6; 
+}
+.myarrow{
+  position: relative;
+  font-size: 80px;
+  left:270px;
+  top:-150px;
+  color: #eaac1b;
+}
+#line4{
+  background-color: #f3f3f3;
+  height: 1000px;
+  width: 3000px;
+  z-index: 1;
+}
 .t1{
 	font-family: "Microsoft YaHei";
-	font-size: 26px
+	font-size: 30px;
+  position:relative;
+  left: 80px;
+  color: #666666;
+}
+.t2{
+  position: relative;
+  font-size: 18px;
+  left: 20px;
+  margin-top:3px;
+  margin-left:30px;
+  color: #666666;
+}
+.t3{
+  font-size: 20px;
+  font-weight: bold;
 }
 #machine{
 /*	height: 2000px*/
@@ -121,70 +204,94 @@
   padding-left: 15px;
   padding-right: 15px;*/
 }
-#a1{
-	position: absolute;
-	left: 200px;
-	top:500px;
+.c1{        
+      position:relative;
+      left:24%;
+      top:7%;
+      font-family: "Microsoft YaHei";
+      font-size: 22px;
+      color: #666666;
 
 }
+.c2{
+  font-size: 15px;
+  position:relative;
+  left:10%;
+  top:10%;
+  margin-top: 3px;
+  color: #666666;
+}
+.c3{
+  font-weight: bold;
+  font-size: 18px;
+}
+
 #r1{
 	position: absolute;
-	left: 360px;
+	left: 200px;
 	top:100px;
 }
 #r2{
 	position: absolute;
-	left: 660px;
+	left: 600px;
 	top:100px;
 }
 #r3{
 	position: absolute;
-	left: 960px;
+	left: 1000px;
 	top:100px;
 }
 #r4{
-	position: absolute;
-	left: 1280px;
-	top:100px;	
+  position: absolute;
+  left: 1400px;
+  top:100px;  
 }
 .a{
-	background:white;
+	background:#f3f3f3;
 	width: 260px;
 	height: 220px;
 	z-index: 50;
 	border-width:5px;
 	border-style:solid;
-	border-color:black;
+	border-color:#666666;
+}
+#a1{
+  position: absolute;
+  left: 100px;
+  top:650px;
+
 }
 #a2{
 	position: absolute;
-	left: 500px;
-	top:500px;
+	left: 450px;
+	top:650px;
 
 }
 #a3{
 	position: absolute;
 	left: 800px;
-	top:500px;
+	top:650px;
 }
 #a4{
 	position: absolute;
-	left: 1100px;
-	top:500px;
+	left: 1150px;
+	top:650px;
 }
 #a5{
 	position: absolute;
-	left: 1400px;
-	top:500px;
+	left: 1500px;
+	top:650px;
 }
 /*#line4{
 	height: 100%
 }*/
 .r {
     border-radius: 25%;
-    background: #0099ff;
+    background: #0066cc;
     width: 230px;
     height:260px;
+    margin-top:80px;
+
 /*    position: absolute;*/
 /*    position: fixed;
     left: 0;
@@ -197,13 +304,12 @@ online{
 }
 .s{
 	border-radius: 8%;
-  background: white;
+  background: #f3f3f3;
   position: relative;
   left: 12%;
   top: 14%;
   width: 76%;
   height:70%;
-  z-index: 10;
 }
 </style>
 <script>
@@ -280,14 +386,17 @@ export default {
                     var data2 = data['data']['Result']
                     if (data2[0]['Val'] === true){
                         var status1 = '运行中';
+                        $('#statuscolor1').css('color','green')
                     }
                     else {
                       if (data2[1]['Val'] === true) 
                       {
                         var status1 = '故障中'
+                        $('#statuscolor1').css('color','#FFA500')
                       }
                       else {
                         var status1 = '停止中'
+                        $('#statuscolor1').css('color','red')
                       }
                     }
 
@@ -299,14 +408,17 @@ export default {
                     var data3 = data['data']['Result']
                      if (data3[0]['Val'] === true){
                         var status2 = '运行中';
+                        $('#statuscolor2').css('color','green')
                     }
                     else {
                       if (data3[1]['Val'] === true) 
                       {
                         var status2 = '故障中'
+                        $('#statuscolor2').css('color','#FFA500')
                       }
                       else {
                         var status2 = '停止中'
+                        $('#statuscolor2').css('color','red')
                       }
                     }
                     self.c = [status2,data3[2]['Val'],data3[3]['Val'],data3[4]['Val'],data3[5]['Val']]
@@ -316,14 +428,17 @@ export default {
                     var data4 = data['data']['Result']
                           if (data4[0]['Val'] === true){
                         var status3 = '运行中';
+                        $('#statuscolor3').css('color','green')
                     }
                     else {
                       if (data4[1]['Val'] === true) 
                       {
                         var status3 = '故障中'
+                        $('#statuscolor3').css('color','#FFA500')
                       }
                       else {
                         var status3 = '停止中'
+                        $('#statuscolor3').css('color','red')
                       }
                     }
                     self.d = [status3,data4[2]['Val'],data4[3]['Val'],data4[4]['Val'],data4[5]['Val']]
@@ -333,14 +448,17 @@ export default {
                     var data5 = data['data']['Result']
                           if (data5[0]['Val'] === true){
                         var status4 = '运行中';
+                        $('#statuscolor4').css('color','green')
                     }
                     else {
                       if (data5[1]['Val'] === true) 
                       {
                         var status4 = '故障中'
+                        $('#statuscolor4').css('color','#FFA500')
                       }
                       else {
                         var status4 = '停止中'
+                        $('#statuscolor4').css('color','red')
                       }
                     }
                     self.e = [status4,data5[2]['Val'],data5[3]['Val'],data5[4]['Val'],data5[5]['Val']]
@@ -350,14 +468,17 @@ export default {
                     var data6 = data['data']['Result']
                           if (data6[0]['Val'] === true){
                         var status5 = '运行中';
+                        $('#statuscolor5').css('color','green')
                     }
                     else {
                       if (data6[1]['Val'] === true) 
                       {
                         var status5 = '故障中'
+                        $('#statuscolor5').css('color','#FFA500')
                       }
                       else {
                         var status5 = '停止中'
+                        $('#statuscolor5').css('color','red') 
                       }
                     }
                     self.f = [status5,data6[2]['Val'],data6[3]['Val'],data6[4]['Val'],data6[5]['Val']]
