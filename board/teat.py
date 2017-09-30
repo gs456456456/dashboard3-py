@@ -1,7 +1,1 @@
-import hashlib
-import json
-a = json.dumps({'a':1,'b':3})
-print(a)
-m = hashlib.md5()
-m.update(a.encode('utf-8'))
-print(m.hexdigest())
+print('onMessageArrived:{"boxid": "jwbox1.255.1", "data": [{"ParameterName": "\u542f\u52a8\u505c\u6b62", "Tms": 1506761481, "Val": "1"}, {"ParameterName": "\u6545\u969c", "Tms": 1506761481, "Val": "0"}, {"ParameterName": "\u6545\u969c\u4ee3\u7801", "Tms": 1506761481, "Val": "0"}, {"ParameterName": "\u5de5\u4f5c\u901f\u5ea6", "Tms": 1506761481, "Val": "5710"}]}')

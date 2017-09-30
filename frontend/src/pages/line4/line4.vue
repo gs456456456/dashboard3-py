@@ -31,7 +31,7 @@
                 <span class="info-box-number" id="0_生产效率">{{a[0]}}kg</span>
               
                 <span class="info-box-text">温度</span>
-                <span class="info-box-number" id="0_生产数量">{{a[1]}}摄氏度</span>
+                <span class="info-box-number" id="0_生产数量">{{a[1]}}℃</span>
               
                 <span class="info-box-text">剪切电流</span>
                 <span class="info-box-number" id="0_报警次数">{{a[2]}}A</span>
@@ -100,7 +100,7 @@
                 <span class="info-box-number" id="0_生产效率">{{a[8]}}kg</span>
               
                 <span class="info-box-text">温度</span>
-                <span class="info-box-number" id="0_生产数量">{{a[9]}}摄氏度</span>
+                <span class="info-box-number" id="0_生产数量">{{a[9]}}℃</span>
               
                 <span class="info-box-text">剪切电流</span>
                 <span class="info-box-number" id="0_报警次数">{{a[10]}}A</span>
@@ -111,128 +111,7 @@
             </div>
           </div>
         </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-          
-            <span id="b1" class="info-box-icon bg-grey"><i class="fa fa-stop-circle-o" id="b2"></i></span>
-          
-            <div class="info-box-content">
-              <span class="info-box-title">理瓶机</span>
-              
-                <span class="info-box-text">运行状态</span>
-                <span class="info-box-number" id="0_生产效率">{{b[0]}}</span>
-                              <span class="info-box-text">故障代码</span>
-                <span class="info-box-number" id="0_生产效率">{{b[1]}}</span>
-
-                <span class="info-box-text">产量</span>
-                <span class="info-box-number" id="0_生产数量">{{b[2]}}瓶</span>
-              
-                <span class="info-box-text">工作速度</span>
-                <span class="info-box-number" id="0_报警次数">{{b[3]}}瓶/小时</span>
-              
-                <span class="info-box-text">批次号</span>
-                <span class="info-box-number" id="0_运行时间">{{b[4]}}</span>
-              
-            </div>
-          </div>
-        </div>
-
-    <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-          
-            <span class="info-box-icon bg-grey" id="c1"><i class="fa fa-stop-circle-o" id="c2"></i></span>
-          
-            <div class="info-box-content">
-              <span class="info-box-title">罐装机</span>
-                <span class="info-box-text">运行状态</span>
-                <span class="info-box-number">{{c[0]}}</span>
-                                              <span class="info-box-text">故障代码</span>
-                <span class="info-box-number" id="0_生产效率">{{c[1]}}</span>
-              
-                <span class="info-box-text">产量</span>
-                <span class="info-box-number">{{c[2]}}瓶</span>
-              
-                <span class="info-box-text">工作速度</span>
-                <span class="info-box-number" id="0_报警次数">{{c[3]}}瓶/小时</span>
-              
-                <span class="info-box-text">批次号</span>
-                <span class="info-box-number" id="0_运行时间">{{c[4]}}</span>
-              
-            </div>
-          </div>
-        </div>
-
-    <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-          
-            <span class="info-box-icon bg-grey" id="d1"><i class="fa fa-stop-circle-o" id="d2"></i></span>
-          
-            <div class="info-box-content">
-                <span class="info-box-title">旋盖机</span>
-                <span class="info-box-text">运行状态</span>
-                <span class="info-box-number">{{d[0]}}</span>
-                                            <span class="info-box-text">故障代码</span>
-                <span class="info-box-number" id="0_生产效率">{{d[1]}}</span>
-                <span class="info-box-text">产量</span>
-                <span class="info-box-number">{{d[2]}}瓶</span>
-              
-                <span class="info-box-text">工作速度</span>
-                <span class="info-box-number" id="0_报警次数">{{d[3]}}瓶/小时</span>
-              
-                <span class="info-box-text">批次号</span>
-                <span class="info-box-number" id="0_运行时间">{{d[4]}}</span>
-              
-            </div>
-          </div>
-        </div>
-    <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-          
-            <span class="info-box-icon bg-grey" id="e1"><i class="fa fa-stop-circle-o" id="e2"></i></span>
-          
-            <div class="info-box-content">
-              <span class="info-box-title">贴标机</span>
-                <span class="info-box-text">运行状态</span>
-                <span class="info-box-number">{{e[0]}}</span>
-                                              <span class="info-box-text">故障代码</span>
-                <span class="info-box-number" id="0_生产效率">{{e[1]}}</span>
-              
-                <span class="info-box-text">产量</span>
-                <span class="info-box-number">{{e[2]}}瓶</span>
-              
-                <span class="info-box-text">工作速度</span>
-                <span class="info-box-number" id="0_报警次数">{{e[3]}}瓶/小时</span>
-              
-                <span class="info-box-text">批次号</span>
-                <span class="info-box-number" id="0_运行时间">{{e[4]}}</span>
-              
-            </div>
-          </div>
-        </div>
-
-    <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="info-box">
-          
-            <span class="info-box-icon bg-grey" id="f1"><i class="fa fa-stop-circle-o" id="f2"></i></span>
-          
-            <div class="info-box-content">
-              <span class="info-box-title">装箱机</span>
-                <span class="info-box-text">运行状态</span>
-                <span class="info-box-number">{{f[0]}}</span>
-                                            <span class="info-box-text">故障代码</span>
-                <span class="info-box-number" id="0_生产效率">{{f[1]}}</span>
-                <span class="info-box-text">产量</span>
-                <span class="info-box-number">{{f[2]}}瓶</span>
-              
-                <span class="info-box-text">工作速度</span>
-                <span class="info-box-number" id="0_报警次数">{{f[3]}}瓶/小时</span>
-              
-                <span class="info-box-text">批次号</span>
-                <span class="info-box-number" id="0_运行时间">{{f[4]}}</span>
-              
-            </div>
-          </div>
-        </div>
+            
 
 
 <!--       </div> -->
@@ -253,11 +132,6 @@ export default {
   data(){
     return{
       a:['NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN'],
-      b:['NaN','NaN','NaN','NaN','NaN'],
-      c:['NaN','NaN','NaN','NaN','NaN'],
-      d:['NaN','NaN','NaN','NaN','NaN'],
-      e:['NaN','NaN','NaN','NaN','NaN'],
-      f:['NaN','NaN','NaN','NaN','NaN'],
       factory:'',
     }
   },
@@ -486,56 +360,17 @@ export default {
                // }
              }
             
-        var interval1 = setInterval(() => {
-                var message = new Paho.MQTT.Message(jsonobj);
-                 message.destinationName = topic;
-                 client.send(message);  
-             }, 6000)
+
         var interval2 = setInterval(() => {
           // Todo...
-          var line2 = {"boxid": "simulator.255.2"}
+          var line2 = {"boxid": "jwbox2.255.1"}
           var jsonobj2 = JSON.stringify(line2)
           var message2 = new Paho.MQTT.Message(jsonobj2);
           message2.destinationName = topic;
           client.send(message2);  
 
         }, 6000)
-          var interval3 = setInterval(() => {
-          // Todo...
-          var line3 = {"boxid": "simulator.255.3"}
-          var jsonobj3 = JSON.stringify(line3)
-          var message3 = new Paho.MQTT.Message(jsonobj3);
-          message3.destinationName = topic;
-          client.send(message3);  
 
-        }, 6000)
-          var interval4 = setInterval(() => {
-          // Todo...
-          var line4 = {"boxid": "simulator.255.4"}
-          var jsonobj4 = JSON.stringify(line4)
-          var message4 = new Paho.MQTT.Message(jsonobj4);
-          message4.destinationName = topic;
-          client.send(message4);  
-
-        }, 6000)
-          var interval5 = setInterval(() => {
-          // Todo...
-          var line5 = {"boxid": "simulator.255.5"}
-          var jsonobj5 = JSON.stringify(line5)
-          var message5 = new Paho.MQTT.Message(jsonobj5);
-          message5.destinationName = topic;
-          client.send(message5);  
-
-        }, 6000)
-          var interval6 = setInterval(() => {
-          // Todo...
-          var line6 = {"boxid": "simulator.255.6"}
-          var jsonobj6 = JSON.stringify(line6)
-          var message6 = new Paho.MQTT.Message(jsonobj6);
-          message6.destinationName = topic;
-          client.send(message6);  
-
-        }, 6000)
 
 
   // function mqtt2() {

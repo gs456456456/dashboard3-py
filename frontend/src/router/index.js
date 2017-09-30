@@ -4,6 +4,8 @@ import mainpage from '../components/mainpage'
 import login from '../components/login'
 import personalist from '../components/personalist'
 import linecom4 from '../components/linecom4'
+import line7 from '../components/line7'
+import linecom7 from '../components/linecom7'
 import detail from '../pages/detail/detail.vue'
 import store from '../store/store.js'
 import line4 from '../pages/line4/line4.vue'
@@ -46,6 +48,22 @@ const routes = [
       path:'/linecom4',
       name:'linecom4',
       component:linecom4,
+      meta: {
+          requireAuth: true
+      }
+    },
+          {
+      path:'/line7',
+      name:'line7',
+      component:line7,
+      meta: {
+          requireAuth: true
+      }
+    },
+          {
+      path:'/linecom7',
+      name:'linecom7',
+      component:linecom7,
       meta: {
           requireAuth: true
       }

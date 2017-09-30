@@ -17,30 +17,31 @@
       <div class="row">
 <!--           <div class="row placeholders"> -->
 <!-- <div v-if='message'> -->
-  
 
-    <div class="col-md-3">
-        </div>
-        <div class="col-md-3">
-    <div id="r1" class="r">
-      <div id="s1" class="s"></div>
-    </div>
-        </div>
-            <div class="col-md-3">
-            <div id="r2" class="r">
-      <div id="s2" class="s"></div>
-    </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="info-box">
+          
+            <span id="b1" class="info-box-icon bg-grey"><i class="fa fa-stop-circle-o" id="b2"></i></span>
+          
+            <div class="info-box-content">
+              <span class="info-box-title">理瓶机</span>
+              
+                <span class="info-box-text">运行状态</span>
+                <span class="info-box-number" id="0_生产效率">{{b[0]}}</span>
+                              <span class="info-box-text">故障代码</span>
+                <span class="info-box-number" id="0_生产效率">{{b[1]}}</span>
+
+<!--                 <span class="info-box-text">产量</span>
+                <span class="info-box-number" id="0_生产数量">{{b[2]}}瓶</span> -->
+              
+                <span class="info-box-text">工作速度</span>
+                <span class="info-box-number" id="0_报警次数">{{b[2]}}瓶/分钟</span>
+              
+<!--                 <span class="info-box-text">批次号</span>
+                <span class="info-box-number" id="0_运行时间">{{b[4]}}</span> -->
+              
+            </div>
           </div>
-        </div>
-            <div class="col-md-3">
-            <div id="r3" class="r">
-      <div id="s3" class="s"></div>
-    </div>
-        </div>
-            <div class="col-md-3">
-    <div id="r4" class="r">
-      <div id="s4" class="s"></div>
-    </div>
         </div>
 
     <div class="col-md-3 col-sm-6 col-xs-12">
@@ -49,20 +50,20 @@
             <span class="info-box-icon bg-grey" id="c1"><i class="fa fa-stop-circle-o" id="c2"></i></span>
           
             <div class="info-box-content">
-              <span class="info-box-title">罐装机</span>
+              <span class="info-box-title">灌装机</span>
                 <span class="info-box-text">运行状态</span>
                 <span class="info-box-number">{{c[0]}}</span>
                                               <span class="info-box-text">故障代码</span>
                 <span class="info-box-number" id="0_生产效率">{{c[1]}}</span>
               
-                <span class="info-box-text">产量</span>
-                <span class="info-box-number">{{c[2]}}瓶</span>
+<!--                 <span class="info-box-text">产量</span>
+                <span class="info-box-number">{{c[2]}}瓶</span> -->
               
                 <span class="info-box-text">工作速度</span>
-                <span class="info-box-number" id="0_报警次数">{{c[3]}}瓶/小时</span>
+                <span class="info-box-number" id="0_报警次数">{{c[2]}}瓶/分钟</span>
               
-                <span class="info-box-text">批次号</span>
-                <span class="info-box-number" id="0_运行时间">{{c[4]}}</span>
+<!--                 <span class="info-box-text">批次号</span>
+                <span class="info-box-number" id="0_运行时间">{{c[4]}}</span> -->
               
             </div>
           </div>
@@ -79,14 +80,14 @@
                 <span class="info-box-number">{{d[0]}}</span>
                                             <span class="info-box-text">故障代码</span>
                 <span class="info-box-number" id="0_生产效率">{{d[1]}}</span>
-                <span class="info-box-text">产量</span>
-                <span class="info-box-number">{{d[2]}}瓶</span>
+<!--                 <span class="info-box-text">产量</span>
+                <span class="info-box-number">{{d[2]}}瓶</span> -->
               
                 <span class="info-box-text">工作速度</span>
-                <span class="info-box-number" id="0_报警次数">{{d[3]}}瓶/小时</span>
+                <span class="info-box-number" id="0_报警次数">{{d[2]}}瓶/分钟</span>
               
-                <span class="info-box-text">批次号</span>
-                <span class="info-box-number" id="0_运行时间">{{d[4]}}</span>
+<!--                 <span class="info-box-text">批次号</span>
+                <span class="info-box-number" id="0_运行时间">{{d[4]}}</span> -->
               
             </div>
           </div>
@@ -103,14 +104,14 @@
                                               <span class="info-box-text">故障代码</span>
                 <span class="info-box-number" id="0_生产效率">{{e[1]}}</span>
               
-                <span class="info-box-text">产量</span>
-                <span class="info-box-number">{{e[2]}}瓶</span>
+<!--                 <span class="info-box-text">产量</span>
+                <span class="info-box-number">{{e[2]}}瓶</span> -->
               
                 <span class="info-box-text">工作速度</span>
-                <span class="info-box-number" id="0_报警次数">{{e[3]}}瓶/小时</span>
+                <span class="info-box-number" id="0_报警次数">{{e[2]}}瓶/分钟</span>
               
-                <span class="info-box-text">批次号</span>
-                <span class="info-box-number" id="0_运行时间">{{e[4]}}</span>
+<!--                 <span class="info-box-text">批次号</span>
+                <span class="info-box-number" id="0_运行时间">{{e[4]}}</span> -->
               
             </div>
           </div>
@@ -127,14 +128,14 @@
                 <span class="info-box-number">{{f[0]}}</span>
                                             <span class="info-box-text">故障代码</span>
                 <span class="info-box-number" id="0_生产效率">{{f[1]}}</span>
-                <span class="info-box-text">产量</span>
-                <span class="info-box-number">{{f[2]}}瓶</span>
+<!--                 <span class="info-box-text">产量</span>
+                <span class="info-box-number">{{f[2]}}瓶</span> -->
               
                 <span class="info-box-text">工作速度</span>
-                <span class="info-box-number" id="0_报警次数">{{f[3]}}瓶/小时</span>
+                <span class="info-box-number" id="0_报警次数">{{f[2]}}箱/分钟</span>
               
-                <span class="info-box-text">批次号</span>
-                <span class="info-box-number" id="0_运行时间">{{f[4]}}</span>
+<!--                 <span class="info-box-text">批次号</span>
+                <span class="info-box-number" id="0_运行时间">{{f[4]}}</span> -->
               
             </div>
           </div>
@@ -149,48 +150,21 @@
 </div>
 </template>
 <style type="text/css">
-  .container{
-  width: 100%;
-  height: 100%
-}
-
-.r {
-    border-radius: 25%;
-    background: grey;
-    width: 50%;
-    height:10000%;
-    position: absolute;
-/*    position: fixed;
-    left: 0;
-    top:0;*/
-    z-index:5; 
-}
-#linecom4{
-
-}
-.s{
-  background: white;
-  position: relative;
-  left: 12%;
-  top: 16%;
-  width: 76%;
-  height:60%;
-  z-index: 10;
-}
+  
 </style>
 <script>
 // import '../../assets/js/mqttws31.js'
-import store from '../../store/store.js'
+import store from '../store/store.js'
 export default {
-  name: 'line4',
+  name: 'line7',
   data(){
     return{
-      a:['NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN'],
-      b:['NaN','NaN','NaN','NaN','NaN'],
-      c:['NaN','NaN','NaN','NaN','NaN'],
-      d:['NaN','NaN','NaN','NaN','NaN'],
-      e:['NaN','NaN','NaN','NaN','NaN'],
-      f:['NaN','NaN','NaN','NaN','NaN'],
+      // a:['NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN','NaN'],
+      b:['NaN','NaN','NaN'],
+      c:['NaN','NaN','NaN'],
+      d:['NaN','NaN','NaN'],
+      e:['NaN','NaN','NaN'],
+      f:['NaN','NaN','NaN'],
       factory:'',
     }
   },
@@ -199,10 +173,9 @@ export default {
   },  
   mounted(){
     var self = this
-    self.factory = store.state.factoryname1
+    self.factory = store.state.factoryname2
     console.log()
              var client = new Paho.MQTT.Client("111.231.114.186", Number(9001), "clientId");
-
              // set callback handlers
              client.onConnectionLost = onConnectionLost;
              client.onMessageArrived = onMessageArrived;
@@ -214,7 +187,6 @@ export default {
              var topic_rev = '/openapi/response/#'
              // connect the client
              client.connect({onSuccess: onConnect,keepAliveInterval:10});
-
              // called when the client connects
              //  function sendrequest(){
              //    var message = new Paho.MQTT.Message(jsonobj);
@@ -242,15 +214,13 @@ export default {
 
              // called when a message arrives
              function onMessageArrived(message) {
+                console.log(1)
                  console.log("onMessageArrived:" + message.payloadString);
                  var data = JSON.parse(message.payloadString)
-                 if (data['boxid'] === 'simulator.255.1'){
-                     var data1 = data['data']['Result']
-                     self.a = [data1[1]['Val'].toFixed(2),data1[8]['Val'].toFixed(2),data1[17]['Val'].toFixed(2),data1[16]['Val'].toFixed(2),data1[2]['Val'].toFixed(2),data1[18]['Val'].toFixed(2),data1[3]['Val'].toFixed(2),data1[21]['Val'].toFixed(2),data1[5]['Val'].toFixed(2),data1[9]['Val'].toFixed(2),data1[24]['Val'].toFixed(2),data1[23]['Val'].toFixed(2)]
-                 }
-                 else if (data['boxid'] === 'simulator.255.2') {
-                    var data2 = data['data']['Result']
-                    if (data2[0]['Val'] === true){
+                 if (data['data']) {
+                 if (data['boxid'] === 'jwbox1.255.1') {
+                    var data2 = data['data']
+                    if (data2[0]['Val'] === '1'){
                         var status1 = '运行中';
                         $('#b1').removeClass()
                         $('#b2').removeClass() 
@@ -258,7 +228,7 @@ export default {
                         $('#b2').addClass("fa fa-play-circle-o")
                     }
                     else {
-                      if (data2[1]['Val'] === true) 
+                      if (data2[1]['Val'] === '1') 
                       {
                         var status1 = '故障中'
                         $('#b1').removeClass()
@@ -276,12 +246,12 @@ export default {
                     }
 
 
-                    self.b = [status1,data2[2]['Val'],data2[3]['Val'],data2[4]['Val'],data2[5]['Val']]
+                    self.b = [status1,data2[2]['Val'],data2[3]['Val']]
                    
                  }
-                 else if (data['boxid'] === 'simulator.255.3') {
-                    var data3 = data['data']['Result']
-                     if (data3[0]['Val'] === true){
+                 else if (data['boxid'] === 'jwbox1.255.2') {
+                    var data3 = data['data']
+                     if (data3[0]['Val'] === '1'){
                         var status2 = '运行中';
                         $('#c1').removeClass()
                         $('#c2').removeClass() 
@@ -289,7 +259,7 @@ export default {
                         $('#c2').addClass("fa fa-play-circle-o")
                     }
                     else {
-                      if (data3[1]['Val'] === true) 
+                      if (data3[1]['Val'] === '1') 
                       {
                         var status2 = '故障中'
                         $('#c1').removeClass()
@@ -305,12 +275,12 @@ export default {
                         $('#c2').addClass("fa fa-stop-circle-o")
                       }
                     }
-                    self.c = [status2,data3[2]['Val'],data3[3]['Val'],data3[4]['Val'],data3[5]['Val']]
+                    self.c = [status2,data3[2]['Val'],data3[3]['Val']]
                    
                  }
-                 else if (data['boxid'] === 'simulator.255.4') {
-                    var data4 = data['data']['Result']
-                          if (data4[0]['Val'] === true){
+                 else if (data['boxid'] === 'jwbox1.255.3') {
+                    var data4 = data['data']
+                          if (data4[0]['Val'] === '1'){
                         var status3 = '运行中';
                         $('#d1').removeClass()
                         $('#d2').removeClass() 
@@ -318,7 +288,7 @@ export default {
                         $('#d2').addClass("fa fa-play-circle-o")
                     }
                     else {
-                      if (data4[1]['Val'] === true) 
+                      if (data4[1]['Val'] === '1') 
                       {
                         var status3 = '故障中'
                         $('#d1').removeClass()
@@ -334,12 +304,12 @@ export default {
                         $('#d2').addClass("fa fa-stop-circle-o")
                       }
                     }
-                    self.d = [status3,data4[2]['Val'],data4[3]['Val'],data4[4]['Val'],data4[5]['Val']]
+                    self.d = [status3,data4[2]['Val'],data4[3]['Val']]
                 
                  }
-                 else if (data['boxid'] === 'simulator.255.5') {
-                    var data5 = data['data']['Result']
-                          if (data5[0]['Val'] === true){
+                 else if (data['boxid'] === 'jwbox1.255.4') {
+                    var data5 = data['data']
+                          if (data5[0]['Val'] === '1'){
                         var status4 = '运行中';
                         $('#e1').removeClass()
                         $('#e2').removeClass() 
@@ -347,7 +317,7 @@ export default {
                         $('#e2').addClass("fa fa-play-circle-o")
                     }
                     else {
-                      if (data5[1]['Val'] === true) 
+                      if (data5[1]['Val'] === '1') 
                       {
                         var status4 = '故障中'
                         $('#e1').removeClass()
@@ -363,12 +333,12 @@ export default {
                         $('#e2').addClass("fa fa-stop-circle-o")
                       }
                     }
-                    self.e = [status4,data5[2]['Val'],data5[3]['Val'],data5[4]['Val'],data5[5]['Val']]
+                    self.e = [status4,data5[2]['Val'],data5[3]['Val']]
                    
                  }
-                 else if (data['boxid'] === 'simulator.255.6') {
-                    var data6 = data['data']['Result']
-                          if (data6[0]['Val'] === true){
+                 else if (data['boxid'] === 'jwbox1.255.5') {
+                    var data6 = data['data']
+                          if (data6[0]['Val'] === '1'){
                         var status5 = '运行中';
                         $('#f1').removeClass()
                         $('#f2').removeClass() 
@@ -376,7 +346,7 @@ export default {
                         $('#f2').addClass("fa fa-play-circle-o")
                     }
                     else {
-                      if (data6[1]['Val'] === true) 
+                      if (data6[1]['Val'] === '1') 
                       {
                         var status5 = '故障中'
                         $('#f1').removeClass()
@@ -392,7 +362,7 @@ export default {
                         $('#f2').addClass("fa fa-stop-circle-o")
                       }
                     }
-                    self.f = [status5,data6[2]['Val'],data6[3]['Val'],data6[4]['Val'],data6[5]['Val']]
+                    self.f = [status5,data6[2]['Val'],data6[3]['Val']]
                    
                  }
                  else
@@ -418,15 +388,18 @@ export default {
                //  }
                // }
              }
-            
+            }
         var interval1 = setInterval(() => {
-                var message = new Paho.MQTT.Message(jsonobj);
-                 message.destinationName = topic;
-                 client.send(message);  
+          var line1 = {"boxid": "jwbox1.255.1"}
+          var jsonobj1 = JSON.stringify(line1)
+          var message1 = new Paho.MQTT.Message(jsonobj1);
+          message1.destinationName = topic;
+          client.send(message1);  
+ 
              }, 6000)
         var interval2 = setInterval(() => {
           // Todo...
-          var line2 = {"boxid": "simulator.255.2"}
+          var line2 = {"boxid": "jwbox1.255.2"}
           var jsonobj2 = JSON.stringify(line2)
           var message2 = new Paho.MQTT.Message(jsonobj2);
           message2.destinationName = topic;
@@ -435,7 +408,7 @@ export default {
         }, 6000)
           var interval3 = setInterval(() => {
           // Todo...
-          var line3 = {"boxid": "simulator.255.3"}
+          var line3 = {"boxid": "jwbox1.255.3"}
           var jsonobj3 = JSON.stringify(line3)
           var message3 = new Paho.MQTT.Message(jsonobj3);
           message3.destinationName = topic;
@@ -444,7 +417,7 @@ export default {
         }, 6000)
           var interval4 = setInterval(() => {
           // Todo...
-          var line4 = {"boxid": "simulator.255.4"}
+          var line4 = {"boxid": "jwbox1.255.4"}
           var jsonobj4 = JSON.stringify(line4)
           var message4 = new Paho.MQTT.Message(jsonobj4);
           message4.destinationName = topic;
@@ -453,7 +426,7 @@ export default {
         }, 6000)
           var interval5 = setInterval(() => {
           // Todo...
-          var line5 = {"boxid": "simulator.255.5"}
+          var line5 = {"boxid": "jwbox1.255.5"}
           var jsonobj5 = JSON.stringify(line5)
           var message5 = new Paho.MQTT.Message(jsonobj5);
           message5.destinationName = topic;
@@ -462,7 +435,7 @@ export default {
         }, 6000)
           var interval6 = setInterval(() => {
           // Todo...
-          var line6 = {"boxid": "simulator.255.6"}
+          var line6 = {"boxid": "jwbox1.255.6"}
           var jsonobj6 = JSON.stringify(line6)
           var message6 = new Paho.MQTT.Message(jsonobj6);
           message6.destinationName = topic;
