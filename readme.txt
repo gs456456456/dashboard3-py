@@ -7,3 +7,5 @@ backend:django
 运行 python3 manage.py runserver 后
 在cd frontend目录下
 vue run dev
+
+工厂看板 请在1080P下浏览
